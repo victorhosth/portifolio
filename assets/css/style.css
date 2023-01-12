@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--family1), var(--family2);
+}
+
+html.dark{
+    color: var(--font-color1);
+}
+
+.flex{
+    display: flex;
+}
+.wrap{
+   flex-wrap: wrap;
+}
+.acenter{
+    display: flex;
+    align-items: center;
+}
+.jcenter{
+    display: flex;
+    justify-content: center;
+}
+.ajcenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.jbtw{
+    display: flex;
+    justify-content: space-between;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.none{
+    display: none !important;
+}
+.container{
+    width: 1100px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Patterns colors */
+:root{
+    --color-1: #2BD984;
+    --color-2: #171C22;
+    --color-3: #20272F;
+    --font-color1: #fff;
+    --font-color2: #E2E9EF;
+
+    --family1:'Epilogue', sans-serif;
+    --family2:'Inter', sans-serif;
+}
+
+.bg-1{
+    background-color: var(--color-1);
+}
+.bg-2{
+    background-color: var(--color-2);
+}
+.bg-3{
+    background-color: var(--color-3);
+}
+
+.cor-1{
+    color: var(--color-1);
+}
+.cor-2{
+    color: var(--color-2);
+}
+.cor-3{
+    color: var(--color-3);
+}
+.cor-f1{
+    color: var(--font-color1)
+}
+.cor-f2{
+    color: var(--font-color2)
+}
+
+.font-f1{
+    font-family: var(--family1);
+}
+.font-f2{
+    font-family: var(--family2);
+}
+
+/* button */
+.btn{
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-size: 10px;
+    padding: 15px 25px;
+}
+
+
+
+.container_menu{
+    height: 80px;
+}
+
+.container_menu img{
+    width: 160px;
+}
+
+.container_menu ul{
+    list-style: none;
+    display: flex;
+}
+.container_menu ul li{
+    padding: 5px 20px;
+    position: relative;
+    line-height: 30px;
+}
+.container_menu ul li:hover{
+    color: var(--font-color1);
+    cursor: pointer;
+}
+
+.container_menu ul li::after{
+    content: " ";
+    height: 3px;
+    background-color: var(--color-1);
+    width: 0%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: .3s ease-in-out;
+}
+.container_menu ul li:hover::after{
+    width: 100%;
+}
+
+
+
+
