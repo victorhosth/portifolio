@@ -137,14 +137,18 @@ a{
     height: 80px;
     margin-bottom: -80px;
 }
-
+header .container{
+    width: 100%;
+}
 .container_menu img{
     width: 160px;
+    margin-right: 50px;
 }
 
 .container_menu ul{
     list-style: none;
     display: flex;
+
 }
 .container_menu ul li{
     padding: 5px 20px;
@@ -186,7 +190,7 @@ a{
 
 }
 #banner .headbanner{
-  
+
     
 }
 
@@ -224,4 +228,19 @@ a{
 .divider_svg{
     width: 100%;
     height: 200px;
+}
+
+.myphoto{
+    width: 150px;
+}
+
+.menu_configs{
+    width: 300px;
+}
+.menu_configs svg{
+    width: 30px;
+    margin: 0px 10px;
+}
+.menu_configs path{
+    color: var(--color-2);
 }
