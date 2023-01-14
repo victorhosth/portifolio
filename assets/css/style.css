@@ -2,13 +2,18 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: var(--family1), var(--family2);
+    font-family: 'Epilogue', sans-serif;
 }
 
 html.dark{
     color: var(--font-color1);
 }
-
+.ff1{
+    font-family: 'Epilogue', sans-serif !important;
+}
+.ff2{
+    font-family: 'Inter', sans-serif !important;
+}
 .flex{
     display: flex;
 }
@@ -41,6 +46,7 @@ html.dark{
 }
 .container{
     width: 1100px;
+    padding: 0px 15px;
 }
 .f1{
     flex: 1;
@@ -67,11 +73,18 @@ a{
     --color-3: #20272F;
     --font-color1: #fff;
     --font-color2: #E2E9EF;
+}
+/* animações */
+@keyframes headline{
+    0%{width: 0%;}
+    15%{width: 0%;}
+    50%{width: 70%;}
+    90%{width: 100%;}
+    100%{width: 100%;}
 
-    --family1:'Epilogue', sans-serif;
-    --family2:'Inter', sans-serif;
 }
 
+/* fim animações */
 .bg-1{
     background-color: var(--color-1);
 }
@@ -107,10 +120,15 @@ a{
 
 /* button */
 .btn{
+    display: inline-block;
+    margin: 20px 0px;
     text-transform: uppercase;
     border-radius: 5px;
-    font-size: 10px;
+    font-size: 12px;
     padding: 15px 25px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    width: fit-content;
 }
 
 
@@ -158,13 +176,52 @@ a{
 /* banner */
 
 #banner{
-    
+    background-image: url('../img/banner-dark.png');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
 }
 
 #banner .headline{
-    height: 100vh;
+
 }
 #banner .headbanner{
-    height: 100vh;
+  
     
+}
+
+.headline h3{
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.headline h1{
+    margin-top: 10px;
+    font-size: 55px;
+    margin-bottom: 25px;
+    
+}
+.headline h5{
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+.headline span{
+    position: relative;
+}
+.headline span::after{
+    content: " ";
+    background-color: var(--color-1);
+    position:absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 5px;
+    width: 100%;
+    opacity: 0.4;
+    border-radius: 5px;
+    animation: headline 5s infinite alternate;
+}
+
+.divider_svg{
+    width: 100%;
+    height: 200px;
 }
