@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: 'Epilogue', sans-serif;
 }
+body{
+    /* overflow-x: hidden; */
+}
 
 html.dark{
     color: var(--font-color1);
@@ -45,19 +48,27 @@ html.dark{
     display: none !important;
 }
 .container{
-    width: 1100px;
+    width: 1080px;
     padding: 0px 15px;
 }
+.container.spc{
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
 .f1{
+    display: flex;
     flex: 1;
 }
 .f2{
+    display: flex;
     flex: 2;
 }
 .f3{
+    display: flex;
     flex: 3;
 }
 .f4{
+    display: flex;
     flex: 4;
 }
 a{
@@ -81,34 +92,33 @@ a{
     50%{width: 70%;}
     90%{width: 100%;}
     100%{width: 100%;}
-
 }
 
 /* fim animações */
 .bg-1{
-    background-color: var(--color-1);
+    background-color: var(--color-1) !important;
 }
 .bg-2{
-    background-color: var(--color-2);
+    background-color: var(--color-2) !important;
 }
 .bg-3{
-    background-color: var(--color-3);
+    background-color: var(--color-3) !important;
 }
 
 .cor-1{
-    color: var(--color-1);
+    color: var(--color-1) !important;
 }
 .cor-2{
-    color: var(--color-2);
+    color: var(--color-2) !important;
 }
 .cor-3{
-    color: var(--color-3);
+    color: var(--color-3) !important;
 }
 .cor-f1{
-    color: var(--font-color1)
+    color: var(--font-color1) !important;
 }
 .cor-f2{
-    color: var(--font-color2)
+    color: var(--font-color2)!important;
 }
 
 .font-f1{
@@ -137,8 +147,11 @@ a{
     height: 80px;
     margin-bottom: -80px;
 }
+
 header .container{
     width: 100%;
+    max-width: 1300px;
+    z-index:10;
 }
 .container_menu img{
     width: 160px;
@@ -181,7 +194,7 @@ header .container{
 
 #banner{
     background-image: url('../img/banner-dark.png');
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
     height: 100vh;
 }
@@ -231,16 +244,337 @@ header .container{
 }
 
 .myphoto{
-    width: 150px;
+    width: 300px;
 }
 
 .menu_configs{
     width: 300px;
 }
 .menu_configs svg{
-    width: 30px;
+    stroke-width: 1px;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
     margin: 0px 10px;
+    border-radius: 50px;
 }
+
+
 .menu_configs path{
     color: var(--color-2);
+}
+
+
+
+
+/* widget */
+.widget_title h3{
+    color: var(--color-1);
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.widget_title h4{
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+.widget_title h5{
+    color: var(--font-color2);
+    letter-spacing: 2px;
+    font-size: 10px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.widget_title p{
+    font-weight: 300;
+    line-height: 20px;
+    font-size: 12px;
+    color: var(--font-color2);
+    margin-bottom: 15px;
+}
+/* fim widget */
+
+.download_cv{
+    margin-left: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.492);
+}
+
+.services_itens{
+    width: 100%;
+}
+.services_itens .item{
+    display: flex;
+    flex:1;
+    background-color: var(--color-2);
+    margin: 5px 10px;
+    padding: 35px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 41px #00000075;
+}
+.services_itens h3{
+    font-size: 25px;
+}
+#about{
+    padding-bottom: 200px;
+}
+#services .container{
+    margin-top: -250px;
+}
+.services_itens path{
+    stroke-width: 1px;
+    color: var(--color-1);
+}
+.services_itens .item:hover path{
+    color: var(--font-color1);
+}
+.services_itens .item:hover{
+    background-color: #27be75;
+}
+.services_itens svg{
+    margin-bottom: 15px;
+    width: 60px;
+    height: 60px;
+}
+
+.space_controlers{
+    width: 100%;
+}
+
+.space_controlers .filter{
+    padding: 0px 30px;
+    border-radius: 5px;
+}
+.space_controlers .filter h5{
+    margin: 0px 5px;
+    padding: 0px 10px;
+    position: relative;
+    line-height: 60px;
+    cursor: pointer;
+}
+.space_controlers .filter h5.active{
+    color: var(--color-1);
+}
+.space_controlers .filter h5.active::after{
+    content: " ";   
+    height: 3px;
+    background-color: var(--color-1);
+    width: 0%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+.space_controlers .filter h5:hover::after{
+    content: " ";   
+    height: 3px;
+    background-color: var(--color-1);
+    width: 0%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: .3s ease-in-out;
+    width: 100%;
+}
+
+.controler{
+    justify-content: flex-end;
+}
+.controler svg{
+    width: 30px;
+}
+.controler div{
+    width: 55px;
+    height: 55px;
+    margin: 0px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.controler div:hover path{
+    color: var(--color-1);
+}
+.controler div.active{
+    background-color: var(--color-3);
+}
+
+#projects{
+
+}
+
+.sliders{
+
+    margin: 20px 0px;
+}
+.sliders .slide{
+    width: 35vw;
+    margin: 5px 10px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--color-3);
+}
+
+.slide img{
+    border-radius: 5px;
+    height: 250px;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+}
+.sliders h4{
+    margin: 10px 0px;
+}
+.sliders p{
+    font-size: 12px;
+    color: var(--font-color2);
+}
+.sliders .btn{
+    margin:0;
+    font-weight: 300;
+    font-size: 10px !important;
+    padding: 10px 20px;
+    height: fit-content;
+}
+
+
+
+
+
+.space_language{
+    width: 100%;
+}
+
+.space_language .item{
+    width: 100px;
+    margin: 20px 20px;
+}
+.space_language .item svg{
+    width: 60px;
+}
+.space_language .item h5{
+    margin-bottom: 10px;
+    font-weight: 300;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+.space_language .item:hover h5{
+    opacity: 1;
+
+}
+.space_language .progress{
+    margin-top: 20px;
+    width: 100%;
+    height: 10px;
+    border-radius: 50px;
+    background-color: var(--color-2);
+}
+.space_language .percent{
+    height: 100%;
+    border-radius: 50px;
+    width: 10%;
+    background-color: var(--color-1);
+    box-shadow: 0px 0px 5px var(--color-1);
+}
+
+
+
+#contact .widget_title h5{
+    
+}
+#contact .widget_title h3{
+    color: var(--color-2);
+}
+
+
+
+.space_contact{
+    width: 100%;
+    margin-top: 50px;
+}
+.space_contact form{
+    width: 500px;
+    padding: 0px 20px 00px 20px;
+    margin-right: 20px;
+}
+.space_contact input,
+.space_contact textarea{
+    background-color: transparent;
+    border: none;
+    margin: 15px 0px;
+    color: var(--color-2);
+    border-bottom: 1px solid var(--color-2);
+    padding: 3px 10px;
+    font-weight: 600;
+    width: 100%;
+}
+.space_contact input::placeholder,
+.space_contact textarea::placeholder{
+    color: var(--color-3);
+    font-weight: 300;
+}
+.space_contact input:focus-visible,
+.space_contact textarea:focus-visible{
+    outline: none;
+}
+.space_contact .btn{
+    background-color: #171C22 !important;
+    color: var(--color-1);
+    padding: 15px 40px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.space_contact textarea{
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 30px;
+    max-height: 200px;
+}
+.space_contact .forms h2{
+    color: var(--color-3);
+    margin-left: 20px;
+}
+
+
+.space_contact .card{
+    background-color: var(--color-2);
+    border-radius: 10px;
+    padding: 0px 20px 0px 50px;
+    margin-left: 50px;
+}
+
+.space_contact .card .row{
+    margin: 10px 0px;
+}
+.space_contact .card .svg{
+    background-color: #27be7545;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+.space_contact .svg svg{
+    width: 25px;
+
+}
+.space_contact .svg path{
+    color: var(--color-1);
+}
+
+.space_contact .card p{
+    font-weight: 300;
+}
+
+footer .container{
+    border-top: 1px solid var(--color-3);
+}
+
+footer .social svg{
+    width: 30px;
+    margin: 0px 5px;
+    stroke-width: 1.3px;
+}
+
+footer path,
+footer p{
+    color: var(--color-3);
 }
