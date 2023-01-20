@@ -635,6 +635,9 @@ footer p{
     .space_contact{
         max-width: 400px;
     }
+    .myphoto{
+        display: none;
+    }
 }
 
 /* menuMobile */
