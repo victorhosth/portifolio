@@ -474,7 +474,7 @@ header .container {
 #projects {}
 
 .galery {
-    width: 100vw;
+    width: calc(100vw - 60px);
     max-width: 1400px;
     margin: 5px 0px;
     padding: 20px;
@@ -492,7 +492,7 @@ header .container {
 .item_galery img {
     border-radius: 5px;
     height: 250px;
-    background-size: cover;
+    object-fit: cover;
     width: 100%;
     background-position: center;
 }
