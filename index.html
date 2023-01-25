@@ -8,7 +8,6 @@
     <title>Victor Hosth - Developer Júnior</title>
     <!-- Import CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/default.css" />
     <!-- import Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -205,7 +204,7 @@
                 </div>
                 <div class="space_projects">
                     <div class="galery flex wrap jcenter">
-                        <div class="item_galery">
+                        <div class="item_galery f1 column">
                             <img src="assets/img/projects/project.png" alt="" />
 
                             <div class="flex jbtw acenter">
@@ -213,12 +212,12 @@
                                     <h4>Agência Digital</h4>
                                     <p>Landipage de uma agência digital.</p>
                                 </div>
-                                <a class="btn bg-2" href="http://" target="_blank">
+                                <div data-name="firstsite-html5-css" class="btn bg-2" href="#">
                                     ver projeto
-                                </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="item_galery">
+                        <div class="item_galery f1 column">
                             <img src="assets/img/projects/project2.png" alt="" />
 
                             <div class="flex jbtw acenter">
@@ -226,12 +225,12 @@
                                     <h4>Site Awax</h4>
                                     <p>Landipage feita a partir de uma imagem</p>
                                 </div>
-                                <a class="btn bg-2" href="http://" target="_blank">
+                                <div data-name="site-awax" class="btn bg-2" href="#">
                                     ver projeto
-                                </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="item_galery">
+                        <div class="item_galery f1 column">
                             <img src="assets/img/projects/project3.png" alt="" />
 
                             <div class="flex jbtw acenter">
@@ -239,12 +238,12 @@
                                     <h4>Bloco de Notas Moderno</h4>
                                     <p>Sistema de anotações moderna com configurações especiais</p>
                                 </div>
-                                <a class="btn bg-2" href="http://" target="_blank">
+                                <div class="btn bg-2" href="#">
                                     ver projeto
-                                </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="item_galery">
+                        <div class="item_galery f1 column">
                             <img src="assets/img/banner-dark.png" alt="" />
 
                             <div class="flex jbtw acenter">
@@ -252,12 +251,12 @@
                                     <h4>Title projects</h4>
                                     <p>descição do projeto</p>
                                 </div>
-                                <a class="btn bg-2" href="http://" target="_blank">
+                                <div class="btn bg-2" href="#">
                                     ver projeto
-                                </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="item_galery">
+                        <div class="item_galery f1 column">
                             <img src="assets/img/banner-dark.png" alt="" />
 
                             <div class="flex jbtw acenter">
@@ -265,7 +264,7 @@
                                     <h4>Title projects</h4>
                                     <p>descição do projeto</p>
                                 </div>
-                                <a class="btn bg-2" href="http://" target="_blank">
+                                <a class="btn bg-2" href="#">
                                     ver projeto
                                 </a>
                             </div>
@@ -438,6 +437,68 @@
             </div>
         </section>
     </main>
+    <section class="ajcenter none" id="modal">
+        <div class="modal_project flex">
+            <div class="modal_galery">
+                <div class="img_banner">
+                    <img src="assets/img/projects/project.png" alt="">
+                </div>
+                <div class="img_outer flex wrap">
+                    <img class="f1" src="assets/img/projects/project.png" alt="">
+                    <img class="f1" src="assets/img/projects/project.png" alt="">
+                    <img class="f1" src="assets/img/projects/project.png" alt="">
+                    <img class="f1" src="assets/img/projects/project.png" alt="">
+                    <img class="f1" src="assets/img/projects/project.png" alt="">
+
+                </div>
+            </div>
+            <div class="modal_space column f1 jcenter">
+                <div class="modal_information">
+                    <h1>Title for my project</h1>
+                    <h3>Pequena descrição</h3>
+                    <h2>lorem ipsum ata black the nifh lorem ipsum ata black the nifh lorem ipsum ata black the nifh
+                        lorem ipsum ata black the nifh</h2>
+                </div>
+                <div class="modal_languages flex wrap">
+                    <!-- <div class="item">
+                        <img src="assets/img/icons/html.svg">
+                    </div> -->
+                </div>
+                <div class="modal_links flex">
+                    <a class="github" href="http://" target="_blank">
+                        <div class="flex ajcenter">
+                            <p>Código</p>
+                            <svg width="22" fill="none" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="1" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21h6Z">
+                                </path>
+                                <path d="M9 19c-4.3 1.4-4.3-2.5-6-3"></path>
+                            </svg>
+                        </div>
+                    </a>
+                    <a class="deploy" href="http://" target="_blank">
+                        <div class="flex ajcenter">
+                            <p>deploy</p>
+                            <svg width="22" fill="none" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="1" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5"></path>
+                                <path d="M10 14 20 4"></path>
+                                <path d="M15 4h5v5"></path>
+                            </svg>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+            <div class="modal_close column jcenter">
+                <div class="line1"></div>
+                <div class="line2"></div>
+            </div>
+        </div>
+    </section>
     <footer class="jcenter bg-1">
         <div class="container jcenter wrap">
             <div class="social f1 acenter">

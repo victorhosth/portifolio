@@ -205,6 +205,7 @@ header .container {
 .container_menu ul {
     list-style: none;
     display: flex;
+    transition: all 0.4s ease-in-out;
 }
 
 .container_menu ul.active {
@@ -471,22 +472,22 @@ header .container {
     background-color: var(--color-3);
 }
 
-#projects {}
+
 
 .galery {
     width: calc(100vw - 60px);
     max-width: 1400px;
     margin: 5px 0px;
-    padding: 20px;
+    padding-top: 20px;
 }
 
 .galery .item_galery {
-    width: calc(33.33% - 20px);
     margin: 10px 10px;
     border-radius: 5px;
     padding: 10px;
     background-color: var(--color-3);
-    min-width: 325px;
+    min-width: 350px;
+
 }
 
 .item_galery img {
@@ -512,6 +513,8 @@ header .container {
     font-size: 10px !important;
     padding: 10px 20px;
     height: fit-content;
+    cursor: pointer;
+    margin-left: 5px;
 }
 
 .space_language {
@@ -576,7 +579,7 @@ header .container {
     margin: 15px 0px;
     color: var(--color-2);
     border-bottom: 1px solid var(--color-2);
-    padding: 3px 10px;
+    padding: 5px 10px 15px 15px;
     font-weight: 600;
     width: 100%;
 }
@@ -669,13 +672,12 @@ footer p {
     }
 }
 
-@media screen and (min-width: 750px) and (max-width: 1075px) {
-    .galery .item_galery {
-        width: calc(50% - 20px);
+@media (max-width:900px) {
+    .space_controlers {
+        flex-direction: column;
     }
-}
 
-@media (max-width: 750px) {
+
     .container_menu ul {
         display: none;
         position: absolute;
@@ -703,6 +705,12 @@ footer p {
         justify-content: flex-end;
     }
 
+}
+
+
+
+@media (max-width: 750px) {
+
     .space_contact form {
         padding: 0px 5px 0px 20px;
         margin-right: 5px;
@@ -720,14 +728,6 @@ footer p {
 
     .myphoto {
         display: none;
-    }
-
-    .space_controlers {
-        flex-direction: column;
-    }
-
-    .galery .item_galery {
-        width: calc(100% - 20px) !important;
     }
 }
 
@@ -770,3 +770,150 @@ footer p {
 }
 
 /* Fim Mobile */
+
+
+
+/* inicio MODAL */
+#modal {
+    position: fixed;
+    z-index: 88;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: #20272fb7;
+    padding: 32px;
+}
+
+
+.modal_project {
+    position: relative;
+    padding: 32px;
+    border-radius: 10px;
+    background-color: var(--color-2);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.548);
+    max-width: 900px;
+    width: 100%;
+    height: 100%;
+}
+
+.modal_close {
+    position: absolute;
+    z-index: 99;
+    top: 24px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.modal_close div {
+    height: 3px;
+    width: 100%;
+    background-color: var(--font-color1);
+    border-radius: 3px;
+}
+
+.modal_close .line1 {
+    rotate: -45deg;
+    margin-bottom: -1.5px;
+}
+
+.modal_close .line2 {
+    rotate: 45deg;
+    margin-top: -1.5px;
+}
+
+
+.modal_galery {
+    width: 50%;
+    margin-right: 16px;
+}
+
+.modal_galery .img_banner img {
+    border-radius: 5px;
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+    background-position: center;
+}
+
+.modal_galery .img_outer img {
+    border-radius: 5px;
+    height: 80px;
+    margin: 5px;
+    object-fit: cover;
+    background-position: center;
+    filter: grayscale(50%);
+    cursor: pointer;
+}
+
+.modal_galery .img_outer img:hover {
+    filter: none;
+}
+
+.modal_space {
+    padding-top: 32px;
+    margin-left: 16px;
+}
+
+.modal_information {
+    margin-bottom: 16px;
+}
+
+.modal_information h3 {
+    font-size: 14px;
+    font-weight: 100;
+    margin-top: 12px;
+    text-transform: uppercase;
+}
+
+.modal_information h2 {
+    font-weight: 300;
+    font-size: 16px;
+    margin-top: 12px;
+    line-height: 24px;
+}
+
+
+.modal_languages {
+    width: 100%;
+    border-radius: 20px;
+
+}
+
+.modal_languages .item {
+    margin: 5px;
+}
+
+.modal_languages .item img {
+    width: 40px;
+}
+
+.modal_links p {
+    font-weight: 200;
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.modal_links div {
+    padding: 8px 16px;
+    background-color: var(--color-3);
+    border-radius: 5px;
+    margin-top: 16px;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+.modal_links div:hover {
+    background-color: var(--color-1);
+}
+
+.modal_links {
+
+    border-radius: 20px;
+    padding-bottom: 16px;
+}
+
+
+/* fim MODAL */
