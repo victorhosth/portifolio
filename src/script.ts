@@ -9,6 +9,8 @@ const buttonProjects = document.querySelectorAll('.item_galery .btn');
 const buttonProjectsQtde = buttonProjects.length;
 const modalProject = document.querySelector('#modal') as HTMLDivElement;
 const modalButtonClose = document.querySelector('.modal_close') as HTMLDivElement;
+const arrayFilter = document.querySelectorAll('.filter h5') as NodeList;
+const arrayProjects = document.querySelectorAll('.galery .item_galery') as NodeList;
 // MenuMobile
 MenuMobile.addEventListener('click', function () {
     MenuMobile.classList.toggle('active')
@@ -165,6 +167,63 @@ const allProjects: dataProjects[] = [
 
 
 ]
+
+arrayFilter.forEach(filter => {
+    //pego o elemento FILTER clicado e altero o visual, depois faço a filtragem em outra função
+    let filterChosen = filter as HTMLDivElement;
+    filter.addEventListener('click', function () {
+        for (let x = 0; x < arrayFilter.length; x++) {
+            let item = arrayFilter[x] as HTMLElement;
+            item.classList.remove('active')
+        }
+        filterChosen.classList.add('active')
+        let sendFiltering = filterChosen.getAttribute('data-name') as string;
+        filtering(sendFiltering)
+    })
+
+});
+
+function filtering(sendFiltering: string) {
+    //colocar fisplay none em todos
+    for (let x = 0; x < arrayProjects.length; x++) {
+        let projectChosen = arrayProjects[x] as HTMLDivElement;
+        projectChosen.classList.add('rotate')
+        setTimeout(() => {
+            projectChosen.classList.remove('rotate')
+        }, 200);
+
+        projectChosen.classList.add('none')
+
+    }
+    //tirar display none nos escolhidos
+
+    let chosen: string[] = [];
+    allProjects.forEach(project => {
+
+        for (let x = 0; x < project.filter.length; x++) {
+            let sendChosen = project.filter[x]
+
+            if (sendChosen === sendFiltering) {
+                chosen.push(project.name)
+            }
+        }
+    })
+    arrayProjects.forEach(project => {
+        let projectChosen = project as HTMLDivElement;
+        let projectDataName = projectChosen.getAttribute('data-name');
+        chosen.forEach(x => {
+            if (x === projectDataName) {
+                projectChosen.classList.remove('none')
+
+            }
+        })
+
+    })
+
+}
+
+
+
 
 
 

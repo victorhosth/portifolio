@@ -8,6 +8,8 @@ const buttonProjects = document.querySelectorAll('.item_galery .btn');
 const buttonProjectsQtde = buttonProjects.length;
 const modalProject = document.querySelector('#modal');
 const modalButtonClose = document.querySelector('.modal_close');
+const arrayFilter = document.querySelectorAll('.filter h5');
+const arrayProjects = document.querySelectorAll('.galery .item_galery');
 // MenuMobile
 MenuMobile.addEventListener('click', function () {
     MenuMobile.classList.toggle('active');
@@ -134,3 +136,46 @@ const allProjects = [
         filter: ['all', 'logic']
     },
 ];
+arrayFilter.forEach(filter => {
+    //pego o elemento FILTER clicado e altero o visual, depois faço a filtragem em outra função
+    let filterChosen = filter;
+    filter.addEventListener('click', function () {
+        for (let x = 0; x < arrayFilter.length; x++) {
+            let item = arrayFilter[x];
+            item.classList.remove('active');
+        }
+        filterChosen.classList.add('active');
+        let sendFiltering = filterChosen.getAttribute('data-name');
+        filtering(sendFiltering);
+    });
+});
+function filtering(sendFiltering) {
+    //colocar fisplay none em todos
+    for (let x = 0; x < arrayProjects.length; x++) {
+        let projectChosen = arrayProjects[x];
+        projectChosen.classList.add('rotate');
+        setTimeout(() => {
+            projectChosen.classList.remove('rotate');
+        }, 200);
+        projectChosen.classList.add('none');
+    }
+    //tirar display none nos escolhidos
+    let chosen = [];
+    allProjects.forEach(project => {
+        for (let x = 0; x < project.filter.length; x++) {
+            let sendChosen = project.filter[x];
+            if (sendChosen === sendFiltering) {
+                chosen.push(project.name);
+            }
+        }
+    });
+    arrayProjects.forEach(project => {
+        let projectChosen = project;
+        let projectDataName = projectChosen.getAttribute('data-name');
+        chosen.forEach(x => {
+            if (x === projectDataName) {
+                projectChosen.classList.remove('none');
+            }
+        });
+    });
+}

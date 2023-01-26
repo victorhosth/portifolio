@@ -487,7 +487,13 @@ header .container {
     padding: 10px;
     background-color: var(--color-3);
     min-width: 350px;
+    rotate: x 0deg;
+    transition: all 0.3s ease-in-out;
 
+}
+
+.galery .item_galery.rotate {
+    rotate: x 90deg;
 }
 
 .item_galery img {
