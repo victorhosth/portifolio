@@ -36,13 +36,16 @@ function colocarPortcentagem() {
 colocarPortcentagem()
 
 //verificador abrir modal project
+buttonProjects.forEach(x => {
+
+});
 for (let x = 0; x < buttonProjectsQtde; x++) {
     buttonProjects[x].addEventListener('click', function () {
         let itemChosen = buttonProjects[x] as HTMLDivElement;
         let dataName: any = itemChosen.getAttribute('data-name');
-
-        openModal()
         dataModal(dataName)
+        openModal()
+
     })
 }
 
@@ -53,18 +56,21 @@ function openModal() {
 function dataModal(dataName: string) {
 
     allProjects.forEach(x => {
+
         let elementTitle = document.querySelector('.modal_information h1') as HTMLElement;
         let elementSubTitle = document.querySelector('.modal_information h3') as HTMLElement;
         let elementDescription = document.querySelector('.modal_information h2') as HTMLElement;
         let buttonGithub = document.querySelector('.modal_links a.github') as HTMLElement;
         let buttonDeploy = document.querySelector('.modal_links a.deploy') as HTMLElement;
         let elementLanguages = document.querySelector('.modal_languages') as HTMLElement;
+        let myGithub: string = "https://github.com/victorhosth/"
+
+        //colocando as inforamações na tela
         if (x.name === dataName) {
             elementTitle.innerText = (x.title)
             elementSubTitle.innerText = (x.subTitle)
             elementDescription.innerText = (x.description)
-
-
+            //colocando os ícones
             elementLanguages.innerHTML = ("")
             x.languages.forEach(language => {
 
@@ -73,11 +79,10 @@ function dataModal(dataName: string) {
                 let imgItem = document.createElement('img') as HTMLElement;
                 imgItem.setAttribute('src', (`assets/img/icons/${language}.svg`))
                 divItem.appendChild(imgItem)
-
                 elementLanguages.appendChild(divItem)
             })
-
-            buttonGithub.setAttribute('href', x.github)
+            //colocando os links
+            buttonGithub.setAttribute('href', myGithub += x.name)
             buttonDeploy.setAttribute('href', x.deploy)
         }
     });
@@ -89,15 +94,18 @@ function closeModal() {
 
 
 //dados
+type nameLanguage = "html" | "css" | "javascript" | "typescript" | 'nodejs';
+
+type filterCategory = "all" | "pages" | "system" | "logic"
 
 type dataProjects = {
     name: string;
     title: string;
     subTitle: string;
     description: string;
-    languages: string[];
-    github: string;
+    languages: nameLanguage[];
     deploy: string;
+    filter: filterCategory[];
 }
 const allProjects: dataProjects[] = [
     {
@@ -106,8 +114,8 @@ const allProjects: dataProjects[] = [
         subTitle: 'Landipage de uma agência digital.',
         description: 'Site 100% responsivo com animações simples e moderna. Layout todo foi desenvolvido do zero por mim. Todo esse projeto foi realizado com apenas 7 dias de estudos no curso de HTML5 e CSS3, com a duração total de desenvolvimento de 4,5 dias.',
         languages: ['html', 'css'],
-        github: 'https://github.com/victorhosth/firstsite-html5-css',
-        deploy: 'https://victorhosth.github.io/firstsite-html5-css/'
+        deploy: 'https://victorhosth.github.io/firstsite-html5-css/',
+        filter: ["all", 'pages']
     },
     {
         name: 'site-awax',
@@ -115,10 +123,45 @@ const allProjects: dataProjects[] = [
         subTitle: 'Landipage feita a partir de uma imagem',
         description: 'Site responsivo para todos os dispositivos, projeto indicado pelo curso, todo os elementos do sites foram entregues juntamente com o design final, meu trabalho foi apenas na montagem do código. Site feito após 11 dias de estudos, fiz antes do professor e o resultado foi o mesmo.',
         languages: ['html', 'css', 'javascript'],
-        github: 'https://github.com/victorhosth/site-awax',
-        deploy: 'https://victorhosth.github.io/site-awax/'
+        deploy: 'https://victorhosth.github.io/site-awax/',
+        filter: ['all', 'pages']
     },
-
+    {
+        name: 'anotador-online',
+        title: 'Bloco de Notas Moderno',
+        subTitle: 'Sistema de anotações moderna com configurações especiais',
+        description: 'Projeto feito do zero, todo o design e a lógica foram desenvolvidos por mim, site dinâmico com tema White, Dark e outras configurações do projeto.',
+        languages: ['html', 'css', 'javascript'],
+        deploy: 'https://victorhosth.github.io/anotador-online/',
+        filter: ['all', 'system']
+    },
+    {
+        name: 'calculadora-js',
+        title: 'Calculadora',
+        subTitle: 'Complexa e moderna com várias funções',
+        description: 'Design da calculadora foi inspirado na calculadora padrão da Samsung, lógica desenvolvida do zero por mim, este é o meu segundo projeto com menos de 20 dias estudando javascript.',
+        languages: ['javascript', 'html', 'css'],
+        deploy: 'https://victorhosth.github.io/calculadora-js/',
+        filter: ['all', 'system']
+    },
+    {
+        name: 'b7web-bateria',
+        title: 'Bateria Musical',
+        subTitle: 'Toque e/ou crie músicas incríveis',
+        description: 'Projeto entregue pelo professor do curso, eu fiz somente a parte lógica.',
+        languages: ['javascript'],
+        deploy: 'https://victorhosth.github.io/b7web-bateria/',
+        filter: ['all', 'logic']
+    },
+    {
+        name: 'b7web-relogio-digital-e-analogico',
+        title: 'Relógio',
+        subTitle: 'Veja a hora atual aonde você estiver',
+        description: 'Projeto entregue pelo professor do curso, eu fiz somente a parte lógica.',
+        languages: ['javascript'],
+        deploy: 'https://victorhosth.github.io/b7web-relogio-digital-e-analogico/',
+        filter: ['all', 'logic']
+    },
 
 
 ]
