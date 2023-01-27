@@ -156,7 +156,7 @@ function filtering(sendFiltering) {
         projectChosen.classList.add('rotate');
         setTimeout(() => {
             projectChosen.classList.remove('rotate');
-        }, 200);
+        }, 400);
         projectChosen.classList.add('none');
     }
     //tirar display none nos escolhidos

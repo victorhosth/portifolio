@@ -190,7 +190,7 @@ function filtering(sendFiltering: string) {
         projectChosen.classList.add('rotate')
         setTimeout(() => {
             projectChosen.classList.remove('rotate')
-        }, 200);
+        }, 400);
 
         projectChosen.classList.add('none')
 
@@ -221,9 +221,6 @@ function filtering(sendFiltering: string) {
     })
 
 }
-
-
-
 
 
 

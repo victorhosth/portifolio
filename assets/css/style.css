@@ -487,13 +487,15 @@ header .container {
     padding: 10px;
     background-color: var(--color-3);
     min-width: 350px;
-    rotate: x 0deg;
+    opacity: 1;
     transition: all 0.3s ease-in-out;
 
 }
 
 .galery .item_galery.rotate {
-    rotate: x 90deg;
+    position: static;
+    opacity: 0;
+    margin-top: 50px;
 }
 
 .item_galery img {
@@ -735,6 +737,35 @@ footer p {
     .myphoto {
         display: none;
     }
+
+    /* inicio modal */
+    .modal_languages .item img {
+        width: 30px;
+    }
+
+    #modal {
+        height: auto !important;
+        padding: 8px !important;
+
+
+
+    }
+
+    .modal_project {
+        width: fit-content !important;
+        flex-direction: column;
+    }
+
+    .modal_galery {
+        width: 100% !important;
+    }
+
+    .modal_space {
+        width: 100% !important;
+        margin-left: 0px !important;
+    }
+
+    /* fim modal */
 }
 
 /* menuMobile */
