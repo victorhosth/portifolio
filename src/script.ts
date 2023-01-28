@@ -164,6 +164,15 @@ const allProjects: dataProjects[] = [
         deploy: 'https://victorhosth.github.io/b7web-relogio-digital-e-analogico/',
         filter: ['all', 'logic']
     },
+    {
+        name: 'b7web-relogio-digital-e-analogico',
+        title: 'Relógio',
+        subTitle: 'Veja a hora atual aonde você estiver',
+        description: 'Projeto entregue pelo professor do curso, eu fiz somente a parte lógica.',
+        languages: ['javascript'],
+        deploy: 'https://victorhosth.github.io/b7web-relogio-digital-e-analogico/',
+        filter: ['all', 'logic']
+    },
 
 
 ]

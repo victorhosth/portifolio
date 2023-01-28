@@ -745,15 +745,21 @@ footer p {
 
     #modal {
         height: auto !important;
-        padding: 8px !important;
-
-
-
+        padding: 16px !important;
+        overflow-x: hidden;
+        overflow-y: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
     }
 
     .modal_project {
         width: fit-content !important;
         flex-direction: column;
+        position: relative;
+        height: fit-content !important;
     }
 
     .modal_galery {
@@ -816,15 +822,21 @@ footer p {
     z-index: 88;
     top: 0px;
     left: 0px;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100vh;
     background-color: #20272fb7;
     padding: 32px;
+
 }
+
+
 
 
 .modal_project {
     position: relative;
+
     padding: 32px;
     border-radius: 10px;
     background-color: var(--color-2);
@@ -839,13 +851,12 @@ footer p {
     z-index: 99;
     top: 24px;
     right: 16px;
-    width: 32px;
-    height: 32px;
+    width: 20px;
     cursor: pointer;
 }
 
 .modal_close div {
-    height: 3px;
+    height: 2px;
     width: 100%;
     background-color: var(--font-color1);
     border-radius: 3px;
@@ -853,12 +864,12 @@ footer p {
 
 .modal_close .line1 {
     rotate: -45deg;
-    margin-bottom: -1.5px;
+    margin-bottom: -1px;
 }
 
 .modal_close .line2 {
     rotate: 45deg;
-    margin-top: -1.5px;
+    margin-top: -1px;
 }
 
 
