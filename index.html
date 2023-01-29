@@ -395,12 +395,15 @@
                 <div class="space_contact flex wrap">
                     <div class="forms f1 column">
                         <h2>Entre em contato</h2>
-                        <form action="" class="column">
-                            <input type="text" name="name" placeholder="Nome" />
-                            <input type="email" name="email" id="email" placeholder="E-mail" />
-                            <input type="text" name="subject" placeholder="Assunto" />
-                            <textarea name="textarea" id="textarea" placeholder="Digite algum coisa..."></textarea>
-                            <input class="btn" type="submit" value="Enviar" />
+                        <form action="https://api.staticforms.xyz/submit" method="post">
+                            <input type="text" name="name" placeholder="Nome" required>
+                            <input type="text" name="email" placeholder="E-mail" required />
+                            <input type="text" name="subject" placeholder="Assunto" required />
+                            <textarea name="message" placeholder="Digite aqui sua mensagem..."></textarea>
+                            <input type="text" name="honeypot" style="display:none">
+                            <input type="hidden" name="accessKey" value="5fba89c6-3767-456f-aab7-14f0523a2681">
+                            <input type="hidden" id="redirectTo" name="redirectTo" value="">
+                            <input class="btn" type="submit" value="Submit" />
                         </form>
                     </div>
                     <div class="card f1 column jcenter">

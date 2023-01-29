@@ -11,6 +11,13 @@ const modalProject = document.querySelector('#modal') as HTMLDivElement;
 const modalButtonClose = document.querySelector('.modal_close') as HTMLDivElement;
 const arrayFilter = document.querySelectorAll('.filter h5') as NodeList;
 const arrayProjects = document.querySelectorAll('.galery .item_galery') as NodeList;
+const currentUrl = window.location.origin;
+const redirectTo = (`${currentUrl}/page/contact-sucess.html`)
+const inputRedirectTo = document.querySelector('#redirectTo') as HTMLInputElement;
+
+//pegar url atual para redicionar o formulário de contato
+inputRedirectTo.setAttribute('value', redirectTo)
+
 // MenuMobile
 MenuMobile.addEventListener('click', function () {
     MenuMobile.classList.toggle('active')
@@ -230,6 +237,8 @@ function filtering(sendFiltering: string) {
     })
 
 }
+
+
 
 
 

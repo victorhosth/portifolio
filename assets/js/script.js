@@ -10,6 +10,11 @@ const modalProject = document.querySelector('#modal');
 const modalButtonClose = document.querySelector('.modal_close');
 const arrayFilter = document.querySelectorAll('.filter h5');
 const arrayProjects = document.querySelectorAll('.galery .item_galery');
+const currentUrl = window.location.origin;
+const redirectTo = (`${currentUrl}/page/contact-sucess.html`);
+const inputRedirectTo = document.querySelector('#redirectTo');
+//pegar url atual para redicionar o formulário de contato
+inputRedirectTo.setAttribute('value', redirectTo);
 // MenuMobile
 MenuMobile.addEventListener('click', function () {
     MenuMobile.classList.toggle('active');
@@ -124,6 +129,15 @@ const allProjects = [
         description: 'Projeto entregue pelo professor do curso, eu fiz somente a parte lógica.',
         languages: ['javascript'],
         deploy: 'https://victorhosth.github.io/b7web-bateria/',
+        filter: ['all', 'logic']
+    },
+    {
+        name: 'b7web-relogio-digital-e-analogico',
+        title: 'Relógio',
+        subTitle: 'Veja a hora atual aonde você estiver',
+        description: 'Projeto entregue pelo professor do curso, eu fiz somente a parte lógica.',
+        languages: ['javascript'],
+        deploy: 'https://victorhosth.github.io/b7web-relogio-digital-e-analogico/',
         filter: ['all', 'logic']
     },
     {
