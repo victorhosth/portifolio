@@ -50,6 +50,7 @@ for (let x = 0; x < buttonProjectsQtde; x++) {
 }
 function openModal() {
     modalProject.classList.remove("none");
+    document.body.classList.add('overnone');
 }
 function dataModal(dataName) {
     allProjects.forEach(x => {
@@ -84,6 +85,7 @@ function dataModal(dataName) {
 modalButtonClose.addEventListener('click', closeModal);
 function closeModal() {
     modalProject.classList.add("none");
+    document.body.classList.remove('overnone');
 }
 const allProjects = [
     {

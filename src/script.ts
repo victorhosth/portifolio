@@ -12,7 +12,7 @@ const modalButtonClose = document.querySelector('.modal_close') as HTMLDivElemen
 const arrayFilter = document.querySelectorAll('.filter h5') as NodeList;
 const arrayProjects = document.querySelectorAll('.galery .item_galery') as NodeList;
 const currentUrl = window.location.origin;
-const redirectTo = (`${currentUrl}/page/contact-sucess.html`)
+const redirectTo = (`${currentUrl}/page/contact-sucess.html`);
 const inputRedirectTo = document.querySelector('#redirectTo') as HTMLInputElement;
 
 //pegar url atual para redicionar o formulário de contato
@@ -60,6 +60,7 @@ for (let x = 0; x < buttonProjectsQtde; x++) {
 
 function openModal() {
     modalProject.classList.remove("none")
+    document.body.classList.add('overnone')
 
 }
 function dataModal(dataName: string) {
@@ -99,6 +100,7 @@ function dataModal(dataName: string) {
 modalButtonClose.addEventListener('click', closeModal)
 function closeModal() {
     modalProject.classList.add("none")
+    document.body.classList.remove('overnone')
 }
 
 
