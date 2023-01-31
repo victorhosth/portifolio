@@ -847,9 +847,8 @@ footer p {
     border-radius: 10px;
     background-color: var(--color-2);
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.548);
-    max-width: 900px;
-    width: 100%;
-    height: 100%;
+    max-width: 450px;
+    height: auto;
 }
 
 .modal_close {
@@ -879,37 +878,8 @@ footer p {
     margin-top: -1px;
 }
 
-
-.modal_galery {
-    width: 50%;
-    margin-right: 16px;
-}
-
-.modal_galery .img_banner img {
-    border-radius: 5px;
-    height: 250px;
-    object-fit: cover;
-    width: 100%;
-    background-position: center;
-}
-
-.modal_galery .img_outer img {
-    border-radius: 5px;
-    height: 80px;
-    margin: 5px;
-    object-fit: cover;
-    background-position: center;
-    filter: grayscale(50%);
-    cursor: pointer;
-}
-
-.modal_galery .img_outer img:hover {
-    filter: none;
-}
-
 .modal_space {
     padding-top: 32px;
-    margin-left: 16px;
 }
 
 .modal_information {
