@@ -190,14 +190,20 @@ arrayFilter.forEach(filter => {
     //pego o elemento FILTER clicado e altero o visual, depois faço a filtragem em outra função
     let filterChosen = filter as HTMLDivElement;
     filter.addEventListener('click', function () {
-        for (let x = 0; x < arrayFilter.length; x++) {
-            let item = arrayFilter[x] as HTMLElement;
-            item.classList.remove('active')
+        if (filterChosen.classList.contains('active')) {
+
+        } else {
+
+            for (let x = 0; x < arrayFilter.length; x++) {
+                let item = arrayFilter[x] as HTMLElement;
+                item.classList.remove('active')
+            }
+            filterChosen.classList.add('active')
+            let sendFiltering = filterChosen.getAttribute('data-name') as string;
+            filtering(sendFiltering)
+
         }
-        filterChosen.classList.add('active')
-        let sendFiltering = filterChosen.getAttribute('data-name') as string;
-        filtering(sendFiltering)
-    })
+    });
 
 });
 
@@ -206,10 +212,6 @@ function filtering(sendFiltering: string) {
     for (let x = 0; x < arrayProjects.length; x++) {
         let projectChosen = arrayProjects[x] as HTMLDivElement;
         projectChosen.classList.add('rotate')
-        setTimeout(() => {
-            projectChosen.classList.remove('rotate')
-        }, 400);
-
         projectChosen.classList.add('none')
 
     }
@@ -231,6 +233,9 @@ function filtering(sendFiltering: string) {
         let projectDataName = projectChosen.getAttribute('data-name');
         chosen.forEach(x => {
             if (x === projectDataName) {
+                setTimeout(() => {
+                    projectChosen.classList.remove('rotate');
+                }, 400);
                 projectChosen.classList.remove('none')
 
             }

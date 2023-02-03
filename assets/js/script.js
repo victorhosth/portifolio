@@ -156,13 +156,17 @@ arrayFilter.forEach(filter => {
     //pego o elemento FILTER clicado e altero o visual, depois faço a filtragem em outra função
     let filterChosen = filter;
     filter.addEventListener('click', function () {
-        for (let x = 0; x < arrayFilter.length; x++) {
-            let item = arrayFilter[x];
-            item.classList.remove('active');
+        if (filterChosen.classList.contains('active')) {
         }
-        filterChosen.classList.add('active');
-        let sendFiltering = filterChosen.getAttribute('data-name');
-        filtering(sendFiltering);
+        else {
+            for (let x = 0; x < arrayFilter.length; x++) {
+                let item = arrayFilter[x];
+                item.classList.remove('active');
+            }
+            filterChosen.classList.add('active');
+            let sendFiltering = filterChosen.getAttribute('data-name');
+            filtering(sendFiltering);
+        }
     });
 });
 function filtering(sendFiltering) {
@@ -170,9 +174,6 @@ function filtering(sendFiltering) {
     for (let x = 0; x < arrayProjects.length; x++) {
         let projectChosen = arrayProjects[x];
         projectChosen.classList.add('rotate');
-        setTimeout(() => {
-            projectChosen.classList.remove('rotate');
-        }, 400);
         projectChosen.classList.add('none');
     }
     //tirar display none nos escolhidos
@@ -190,6 +191,9 @@ function filtering(sendFiltering) {
         let projectDataName = projectChosen.getAttribute('data-name');
         chosen.forEach(x => {
             if (x === projectDataName) {
+                setTimeout(() => {
+                    projectChosen.classList.remove('rotate');
+                }, 400);
                 projectChosen.classList.remove('none');
             }
         });

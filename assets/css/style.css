@@ -429,6 +429,7 @@ header .container {
 
 .space_controlers .filter h5.active {
     color: var(--color-1);
+    cursor: auto;
 }
 
 .space_controlers .filter h5.active::after {
@@ -501,7 +502,7 @@ header .container {
 .galery .item_galery.rotate {
     position: static;
     opacity: 0;
-    margin-top: 50px;
+    transition: all 0.3s ease-in-out;
 }
 
 .item_galery img {
@@ -584,16 +585,17 @@ header .container {
 .space_contact form {
     padding: 0px 20px 00px 20px;
     margin-right: 20px;
+    margin-top: 8px;
 }
 
 .space_contact input,
 .space_contact textarea {
     background-color: transparent;
     border: none;
-    margin: 15px 0px;
+    margin: 8px 0px;
     color: var(--color-2);
     border-bottom: 1px solid var(--color-2);
-    padding: 5px 10px 15px 15px;
+    padding: 8px 10px 8px 15px;
     font-weight: 600;
     width: 100%;
 }
@@ -693,7 +695,6 @@ footer p {
 
 
     .container_menu ul {
-        display: none;
         position: absolute;
         right: 0px;
         top: 0px;
@@ -703,6 +704,16 @@ footer p {
         border-end-start-radius: 10px;
         box-shadow: -5px 5px 20px var(--color-3);
         padding: 80px 20px 20px 20px;
+        transform-origin: right;
+        transform: rotatey(90deg);
+        display: block !important;
+        opacity: 0;
+    }
+
+    .container_menu ul.active {
+        transform: rotatey(0deg);
+        opacity: 1;
+
     }
 
     .container_menu ul li {
@@ -758,7 +769,6 @@ footer p {
         right: 0;
         bottom: 0;
         left: 0;
-        display: block;
     }
 
     .modal_project {
