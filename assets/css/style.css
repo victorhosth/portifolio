@@ -73,6 +73,7 @@ html.dark {
 }
 
 .overnone {
+
     overflow: hidden;
 }
 
@@ -192,6 +193,10 @@ a {
     width: fit-content;
 }
 
+.btn:hover {
+    scale: 1.1;
+}
+
 .container_menu {
     height: 80px;
     margin-bottom: -80px;
@@ -302,7 +307,7 @@ header .container {
 }
 
 .myphoto {
-    width: 300px;
+    width: 270px;
 }
 
 .menu_configs {
@@ -620,10 +625,9 @@ header .container {
 }
 
 .space_contact textarea {
-    max-width: 100%;
-    min-width: 100%;
+    resize: vertical;
     min-height: 30px;
-    max-height: 200px;
+    max-height: 100px;
 }
 
 .space_contact .forms h2 {
@@ -637,6 +641,7 @@ header .container {
     padding: 0px 20px 0px 50px;
     margin-left: 50px;
     min-width: 338px;
+    max-width: 400px;
 }
 
 .space_contact .card .row {
